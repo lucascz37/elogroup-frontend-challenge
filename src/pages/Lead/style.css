@@ -1,0 +1,13 @@
+.lead-form{
+    margin: 5% auto 0 auto;
+    width: 50%;
+}
+
+.check-all{
+    display: flex;
+    flex-direction: column;
+}
+
+.check-all-label{
+    padding: 0 0 8px;
+}

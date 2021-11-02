@@ -1,0 +1,7 @@
+.column {
+    flex:1;
+}
+
+.column-name .ant-list-header{
+    text-align: center;
+}

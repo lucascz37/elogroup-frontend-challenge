@@ -1,0 +1,12 @@
+.header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0 2%;
+    background: #212121;
+}
+
+.header h1{
+    color: #fff;
+    margin: 1%  0 1% 0;
+}

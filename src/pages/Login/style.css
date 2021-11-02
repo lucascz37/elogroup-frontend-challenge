@@ -1,0 +1,23 @@
+.login-form-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #F6F6F6;
+}
+
+.login-form-container img{
+    width: 100px;
+    height: 100px;
+    border-radius: 5px;
+    margin-bottom: 2%;
+}
+
+.register-link{
+    color: #9A9483;
+}
+
+.link-text{
+    color: #9A9483 !important;
+}
