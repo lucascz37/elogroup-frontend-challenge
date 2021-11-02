@@ -3,14 +3,15 @@ import Text from "antd/lib/typography/Text";
 import { useHistory } from "react-router";
 import { Link } from "react-router-dom";
 import ElogroupIcon from "../../assets/elogroupIcon.jpg";
-import { authUser } from "../../service/userService";
+import { authUser, setAuth } from "../../service/userService";
 import "./style.css";
 
 const Login = () => {
   const history = useHistory();
   function onFinish(values) {
     if (authUser(values.username, values.password)) {
-      history.push("/home");
+      setAuth();
+      history.replace("/home");
     } else {
       message.error("Usuário e/ou senha inválidos");
     }

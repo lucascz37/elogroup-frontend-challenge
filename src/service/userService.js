@@ -1,4 +1,5 @@
 const users = JSON.parse(localStorage.getItem("users")) || [];
+let auth = JSON.parse(localStorage.getItem("auth")) || false;
 
 const createUser = (name, password) => {
   if (users.filter((user) => user.name === name).length > 0) {
@@ -19,4 +20,13 @@ const authUser = (name, password) => {
   return false;
 };
 
-export { createUser, authUser };
+const isAuth = () => {
+  return auth;
+};
+
+const setAuth = () => {
+  auth = !auth;
+  localStorage.setItem("auth", JSON.stringify(auth));
+};
+
+export { createUser, authUser, isAuth, setAuth };

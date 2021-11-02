@@ -6,6 +6,7 @@ import { Button } from "antd";
 import "./style.css";
 import { useHistory } from "react-router";
 import { getLeads, updateLeads } from "../../service/leadService";
+import { setAuth } from "../../service/userService";
 
 const Home = () => {
   const history = useHistory();
@@ -89,9 +90,14 @@ const Home = () => {
     history.push("/lead");
   }
 
+  function logout() {
+    setAuth();
+    history.replace("/");
+  }
+
   return (
     <div className="container">
-      <Header label="Sair" />
+      <Header label="Sair" labelFunction={logout} />
       <div className="leads-container">
         <Button type="primary" onClick={newLead}>
           Novo Lead

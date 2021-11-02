@@ -30,7 +30,7 @@ const Lead = () => {
 
   return (
     <div>
-      <Header label="Voltar" labelFunction={() => history.push("home")} />
+      <Header label="Voltar" labelFunction={() => history.replace("home")} />
       <Form className="lead-form" layout="vertical" onFinish={onFinish}>
         <Form.Item
           label="Nome"
