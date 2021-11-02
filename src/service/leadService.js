@@ -23,7 +23,6 @@ const getLeads = () => {
 const createLead = (name) => {
   const columns = Object.values(getLeads());
   const result = columns.every((col) => {
-    console.log(col.list.filter((row) => row.text === name).length);
     if (col.list.filter((row) => row.text === name).length > 0) {
       return false;
     }

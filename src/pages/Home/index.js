@@ -52,6 +52,18 @@ const Home = () => {
       setColumns((state) => ({ ...state, [newCol.id]: newCol }));
       return null;
     } else {
+      //Check if movement is permitted
+      if (source.droppableId === "todo" && destination.droppableId === "done") {
+        return null;
+      } else if (
+        source.droppableId === "doing" &&
+        destination.droppableId !== "done"
+      ) {
+        return null;
+      } else if (source.droppableId === "done") {
+        return null;
+      }
+
       // If start is different from end, we need to update multiple columns
       // Filter the start list like before
       const newStartList = start.list.filter((_, idx) => idx !== source.index);
