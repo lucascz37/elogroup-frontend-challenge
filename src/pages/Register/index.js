@@ -1,7 +1,9 @@
 import { Button, Form, Input, message } from "antd";
+import Text from "antd/lib/typography/Text";
 import { createUser } from "../../service/userService";
 import { useState } from "react";
 import { useHistory } from "react-router";
+import { Link } from "react-router-dom";
 
 const Register = () => {
   const [password, setPassword] = useState("");
@@ -68,6 +70,11 @@ const Register = () => {
           </Button>
         </Form.Item>
       </Form>
+      <Text className="register-link" underline>
+        <Link className="link-text" to="/">
+          Voltar
+        </Link>
+      </Text>
     </div>
   );
 };
