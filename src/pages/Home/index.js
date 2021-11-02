@@ -104,12 +104,11 @@ const Home = () => {
 
   function logout() {
     setAuth();
-    history.replace("/");
   }
 
   return (
     <div className="container">
-      <Header label="Sair" labelFunction={logout} />
+      <Header label="Sair" fun={logout} path="/" />
       <div className="leads-container">
         <Button type="primary" onClick={newLead}>
           Novo Lead
