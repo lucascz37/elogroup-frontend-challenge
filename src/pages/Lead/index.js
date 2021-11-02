@@ -1,4 +1,12 @@
-import { Checkbox, Form, Input, Divider, Button, Typography } from "antd";
+import {
+  Checkbox,
+  Form,
+  Input,
+  Divider,
+  Button,
+  Typography,
+  message,
+} from "antd";
 import { useState } from "react";
 import { useHistory } from "react-router";
 import Header from "../../components/Header";
@@ -25,7 +33,12 @@ const Lead = () => {
   };
 
   function onFinish(values) {
-    createLead(values.name);
+    if (createLead(values.name)) {
+      message.success("Lead criada com sucesso");
+      history.replace("/home");
+    } else {
+      message.error("Lead já existente");
+    }
   }
 
   return (
